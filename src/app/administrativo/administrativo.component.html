@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--MENU-->
+    <header>
+        <nav class="menu">
+            <ul class="menuinicial">
+                <li><a class="navbar-brand" routerLink="/UTL">
+                        <img class="logotipo"
+                            src="https://blogger.googleusercontent.com/img/a/AVvXsEhKVCQ32iN6enGnX9yPmZ262Z7ow-rKJydodF2aoMrrt53SnJKhs20Gxr0aHgXXbFUMyVSsqs0Q9MGpNnteD1cfXlQhrgs176_Ljo9SdAiMEtraB2o1P10VGKJ0M_2Pr1xYPrhoj28ThYEClSUNYACaiH6nOVQU9iA_HNGeWHPwT3H8fD3KS7qrE5IAjBaR"
+                            alt="UTLlogo" width="30">
+                    </a>
+                </li>
+                <li><a href="#">Somos UTL</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="#">Nuestra Rectora</a></li>
+                        <li><a href="#">Conoce la UTL</a></li>
+                        <li><a href="#">Calidad</a></li>
+                        <li><a href="#">Difusión e Imagen Institucional</a></li>
+                        <li><a href="#">Organos Colegiados</a></li>
+                        <li><a href="#">Normativa</a></li>
+                        <li><a href="#">Transparencia</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul> -->
+                </li>
+                <li><a routerLink="/Aspirantes">Aspirantes</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAspirantes()">Oferta Educativa</a></li>
+                        <li><a (click)="navigateToAspirantes()">¿Como estudiar en UTL?</a></li>
+                        <li><a (click)="navigateToAspirantes()">Sobre Becas</a></li>
+                        <li><a (click)="navigateToAspirantes()">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Alumnos">Alumnos</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAlumnos()">Trámites escolares</a></li>
+                        <li><a (click)="navigateToAlumnos()">SITO</a></li>
+                        <li><a (click)="navigateToAlumnos()">Aula Virtual</a></li>
+                        <!-- <li><a (click)="navigateToAlumnos()">Servicios al Alumnado</a></li> -->
+                        <li><a (click)="navigateToAlumnos()">Calendario Escolar 2023 - 2024</a></li>
+                        <!-- <li><a (click)="navigateToAlumnos()">Correo Institucional</a></li>
+                        <li><a (click)="navigateToAlumnos()">Becas</a></li>
+                        <li><a (click)="navigateToAlumnos()">Biblioteca Digital</a></li>
+                        <li><a (click)="navigateToAlumnos()">Normativa Institucional</a></li>
+                        <li><a (click)="navigateToAlumnos()">Quejas y Denuncias</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/Docentes">Docentes</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToDocentes()">Recursos Docente</a></li>
+                        <li><a (click)="navigateToDocentes()">Desarrollo Académico</a></li>
+                        <li><a (click)="navigateToDocentes()">Investigación UTL</a></li>
+                        <li><a (click)="navigateToDocentes()">Salud Integral</a></li>
+                        <li><a (click)="navigateToDocentes()">SITO</a></li>
+                        <li><a (click)="navigateToDocentes()">Correo Institucional</a></li>
+                        <li><a (click)="navigateToDocentes()">Biblioteca Digital</a></li>
+                        <li><a (click)="navigateToDocentes()">Normativa Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Administrativo">Administrativo</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAdmin()">Recursos Administrativos</a></li>
+                        <li><a (click)="navigateToAdmin()">Desarrollo Humano</a></li>
+                        <li><a (click)="navigateToAdmin()">Salud Integral</a></li>
+                        <li><a (click)="navigateToAdmin()">Seguridad Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Empresario">Empresario</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToEmpre()">Vinculación</a></li>
+                        <li><a (click)="navigateToEmpre()">Servicios a la Ind.</a></li>
+                        <li><a (click)="navigateToEmpre()">Programas Educativos</a></li>
+                        <li><a (click)="navigateToEmpre()">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Egresado">Egresado</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToEgre()">Bolsa de Trabajo</a></li>
+                        <li><a (click)="navigateToEgre()">Emprendimiento</a></li>
+                        <li><a (click)="navigateToEgre()">Educación Continua</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--CARRUSEL-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhpEQbs75SbYUBqp8TvwGmPm3nYgU1rmzxXPPZRmDGZPTBsgLy5YZaPJ3FqnjjM1CoGkVMA4cU58Ad1VRL5at-fAYmUah6GGW3Vt_89fY7XGKJdrjhzhWlnlwu_9XnuJ7r7jsxujU1c51BLefRiSEIl9tKQp_wUZ5xzkjlX5DdT7o36L-sLzAXzZhNTm1OH"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEi65ydfrmOSydPssRRRSBvvRr1PEc-SQJ-IAzFWRB8seUlVn4EQX3J_WuMNoCrDm6CBn2ZCVSFvaGrHjMQDD_VFD-YMQR-iIHX3hB00r2A4zBscY5Ap7ktPo5iWA2ybbBZQLKtd1o-p0I-c_NaCYWW4NSt_Uk1m5FWA3xTYfkMu4Jlc7H4QRacebtwvUB15"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhsgVR-hlhIb-DKMd32vZUPKh_rlteufgaPYe3qxYnVCfTGgPLwCJF71md2aqq1_mFfy77fy6ZuANyeP9hZLf_7_18NPxx69X9lSHXuhNLWBFP8UMNtMJcj7mY5MhWTOswEJ_zpF6NCrpjNsZCB8zfTBNC3rTNsJbdJr9bJZkNiONwtcA_vGtSSLjhYfNc1"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <div class="carga">
+        En Desarrollo
+        <mat-spinner></mat-spinner>
+    </div>
+    <!--CINTILLO-->
+    <div class="cintillo">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhM27JKvOJf4Ax0jT_GgSJ3iQVBZ3SmWjlrvCWA4CMngF_mYjgSHdUGLAR13aBgZ9prZ44cLWmgyrrXGSVpMeC0slg6qxcxUP4fMQrY5g_1zsT4lYsD3lWo3jHTT3cLBfRVPVV1Invvmq-f81aA_wvyC_nYhvsO2GSUfq26zQZ6SkhxmXm0V07b6zNX27j5"
+            alt="Cintillo">
+        <br>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <br>
+        <p>Blvd. Universidad Tecnológica #225 Col. Sancarlos</p>
+        <p>CP. 37670 León, Gto. Mex. | 477 710 00 20</p>
+        <li><a href="#">Aviso de privacidad</a></li>
+        <br>
+    </footer>
+</body>
+
+</html>

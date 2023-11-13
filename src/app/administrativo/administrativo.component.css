@@ -1,0 +1,164 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del menú principal */
+nav {
+    background-color: #00c2a8;
+    padding: 5px 0;
+    text-align: center; /* Centra el menú principal */
+}
+
+
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    display: block;
+    padding: 10px 20px;
+}
+
+.menu ul li a:hover {
+    background: #0e046b;
+    border-radius: 50px;
+    transform: none;
+    padding: 10px 20px;
+}
+
+/* Estilos del ícono (puedes personalizar según tus necesidades) */
+.icon {
+    width: 20px;
+    height: 20px;
+    background-size: 200% 200%;
+    display: block;
+    background-position: -10px -10px;
+    background-repeat: no-repeat;
+}
+
+/* Submenú a la izquierda */
+.submenu {
+    position: absolute;
+    top: 100%; /* Coloca el submenú debajo del elemento principal */
+    left: 0;
+    background: #00c2a8;
+    border: none;
+    z-index: 1000;
+    text-align: left;
+    display: none;
+    width: 200px; /* Ancho del submenú */
+    /* height: 310px; */
+    
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:not(:hover) .submenu {
+    display: none;
+}
+
+.logotipo{
+    scale: 180%;  
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
+}
+
+.cintillo{
+    text-align: center;
+    height: auto;
+}
+
+.footer{
+    text-align: center;
+    position: flex;
+    background-color: #0e046b;
+    color: #fff;
+}
+
+.carga{
+    margin-left: 45%;
+}
+
+/* Estilos responsivos para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Cambia el tamaño de fuente en pantallas pequeñas */
+        background-color: #fff; /* Cambia el fondo a blanco en pantallas pequeñas */
+        padding: 20px;
+        text-align: center;
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .menu {
+        padding: 10px;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .menu ul li {
+        margin: 10px 0;
+    }
+
+    .menu ul li a {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .tarjetas {
+        flex-direction: column; /* Cambia la orientación de las tarjetas en pantallas pequeñas */
+        align-items: center;
+    }
+
+    .card {
+        margin: 10px 0; /* Espaciado vertical entre tarjetas */
+    }
+
+    .cintillo {
+        text-align: center;
+        height: auto;
+    }
+
+    .footer {
+        text-align: center;
+        position: flex;
+        background-color: #0e046b;
+        color: #fff;
+    }
+}

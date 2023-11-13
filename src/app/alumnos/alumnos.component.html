@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--MENU-->
+    <header>
+        <nav class="menu">
+            <ul class="menuinicial">
+                <li><a class="navbar-brand" routerLink="/UTL">
+                        <img class="logotipo"
+                            src="https://blogger.googleusercontent.com/img/a/AVvXsEhKVCQ32iN6enGnX9yPmZ262Z7ow-rKJydodF2aoMrrt53SnJKhs20Gxr0aHgXXbFUMyVSsqs0Q9MGpNnteD1cfXlQhrgs176_Ljo9SdAiMEtraB2o1P10VGKJ0M_2Pr1xYPrhoj28ThYEClSUNYACaiH6nOVQU9iA_HNGeWHPwT3H8fD3KS7qrE5IAjBaR"
+                            alt="UTLlogo" width="30">
+                    </a>
+                </li>
+                <li><a href="#">Somos UTL</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="#">Nuestra Rectora</a></li>
+                        <li><a href="#">Conoce la UTL</a></li>
+                        <li><a href="#">Calidad</a></li>
+                        <li><a href="#">Difusión e Imagen Institucional</a></li>
+                        <li><a href="#">Organos Colegiados</a></li>
+                        <li><a href="#">Normativa</a></li>
+                        <li><a href="#">Transparencia</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul> -->
+                </li>
+                <li><a routerLink="/Aspirantes">Aspirantes</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAspirantes()">Oferta Educativa</a></li>
+                        <li><a (click)="navigateToAspirantes()">¿Como estudiar en UTL?</a></li>
+                        <li><a (click)="navigateToAspirantes()">Sobre Becas</a></li>
+                        <li><a (click)="navigateToAspirantes()">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Alumnos">Alumnos</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAlumnos()">Trámites escolares</a></li>
+                        <li><a (click)="navigateToAlumnos()">SITO</a></li>
+                        <li><a (click)="navigateToAlumnos()">Aula Virtual</a></li>
+                        <!-- <li><a (click)="navigateToAlumnos()">Servicios al Alumnado</a></li> -->
+                        <li><a (click)="navigateToAlumnos()">Calendario Escolar 2023 - 2024</a></li>
+                        <!-- <li><a (click)="navigateToAlumnos()">Correo Institucional</a></li>
+                        <li><a (click)="navigateToAlumnos()">Becas</a></li>
+                        <li><a (click)="navigateToAlumnos()">Biblioteca Digital</a></li>
+                        <li><a (click)="navigateToAlumnos()">Normativa Institucional</a></li>
+                        <li><a (click)="navigateToAlumnos()">Quejas y Denuncias</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/Docentes">Docentes</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToDocentes()">Recursos Docente</a></li>
+                        <li><a (click)="navigateToDocentes()">Desarrollo Académico</a></li>
+                        <li><a (click)="navigateToDocentes()">Investigación UTL</a></li>
+                        <li><a (click)="navigateToDocentes()">Salud Integral</a></li>
+                        <li><a (click)="navigateToDocentes()">SITO</a></li>
+                        <li><a (click)="navigateToDocentes()">Correo Institucional</a></li>
+                        <li><a (click)="navigateToDocentes()">Biblioteca Digital</a></li>
+                        <li><a (click)="navigateToDocentes()">Normativa Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Administrativo">Administrativo</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAdmin()">Recursos Administrativos</a></li>
+                        <li><a (click)="navigateToAdmin()">Desarrollo Humano</a></li>
+                        <li><a (click)="navigateToAdmin()">Salud Integral</a></li>
+                        <li><a (click)="navigateToAdmin()">Seguridad Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Empresario">Empresario</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToEmpre()">Vinculación</a></li>
+                        <li><a (click)="navigateToEmpre()">Servicios a la Ind.</a></li>
+                        <li><a (click)="navigateToEmpre()">Programas Educativos</a></li>
+                        <li><a (click)="navigateToEmpre()">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Egresado">Egresado</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToEgre()">Bolsa de Trabajo</a></li>
+                        <li><a (click)="navigateToEgre()">Emprendimiento</a></li>
+                        <li><a (click)="navigateToEgre()">Educación Continua</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--CARRUSEL-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiDUQFNLyam-OE8s2f81PEbEnLgMnlOozv2fbVz5tARRUnwBRkNvb4tcbDVXcrQzAK_ndvPJhxhJ4yK4tCoN6FTlMcunty_nnYzKRfTVm8k6c_AwwLU1eNRDshZjHPJophcRfZxMrWrtv7ku4Wru6XqAOfUTLbSFoEYmsl4FCz1fwW1s8sau5nfnfnZyuzD"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEht5svLd1TKqhyotsExQlxtOVNXz7J3mIfhcnG78zbip27LIg5JMFjEp-352WV9OMiu4oBZZ_gtlVTyP84ON5_N76hlT2SldKnRyS-lL_Je7mS-Cn-p3Vh-HbrXZuFUX7OXY9AhDwheQxeIvivbeahgExVrZtLquEuJhdNQmmanuMCUJ3BViRsr8B50rr9B"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEjQHsw78kLLEYhIE9JqmowMRLl6EF_sS0_gk98NTyNn5toKdxGMIxsIcLcR3Uu13I-BfJ1BFLWCcW-zQVJg76UQJBARs9wVmcIhKST6b46tne5C2_OigQd69vKMNA7ygqz2kxy1sy9aDxAj7XYPwDVrruXQ0aX0pJBBoqGkhEMvZdHEfsKLRULcGMG4x2V9"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <!--Navegación-->
+    <div>
+        <nav id="navegador">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Alumnos</li>
+            </ol>
+        </nav>
+    </div>
+    <!--SECCIÓN SERVICIOS ESCOLARES-->
+    <section id="tramites-escolares">
+        <div class="notitulo">
+            <p>Trámites escolares</p>
+        </div>
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+            <mat-tab label="Solicitud de Constancias">
+                <div class="descripcion">
+                    <br>
+                    <div class="notitulo">
+                        Constancias
+                    </div>
+                    <br>
+                    <div class="descripcion1">
+                        El proceso y emisión del documento de constancia de estudios se realizará por medio electrónico
+                        y de manera digital, debido al periodo de contingencia actual.
+                        <br><br>
+                        Se emite con los datos de la persona de la Institución que validada la información, así como, un
+                        código de identificación en el documento para cualquier cotejo o validación posterior, en caso
+                        de ser requerido por quién recibe el documento.
+                        <br><br>
+                        En caso de requerir una constancia de estudios, bajo las especificaciones expuestas, deberás
+                        realizar el siguiente proceso.
+                    </div>
+                    <br>
+                    <div class="procesos">
+                        <iframe
+                            src="https://view.genial.ly/62461312c1dd840018544a09/interactive-content-constancia-21-03-2023"
+                            width="100%" height="1200px" style="overflow: hidden;"></iframe>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Trámite de Credencial">
+                <div class="descripcion">
+                    <br>
+                    <div class="notitulo">
+                        Credencial
+                    </div>
+                    <br>
+                    <div class="descripcion1">
+                        Si extraviaste tu credencial de alumno, es tu responsabilidad reponerla lo antes posible.
+                        <br><br>
+                        Recuerda que la credencial de alumno es necesaria para acceder a los laboratorios y otros
+                        servicios que brinda la universidad.
+                        <br><br>
+                        <li>Realiza el pago de reposición de credencial, ingresando a tu cuenta de SITO en
+                            1-Reinscripción y Referencias de Pago -> 3-Otras Referencias -> Otros Pagos -> Reposición de
+                            credencial.
+                        </li>
+                        <li>
+                            Acude a Servicios Estudiantiles a solicitar la elaboración de tu credencial
+                        </li>
+                        <li>
+                            Recolecta las firmas y sellos de los diferentes departamentos en la Universidad en un
+                            formato proporcionado por Servicios Estudiantiles.
+                        </li>
+                        <li>
+                            Entrega el formato en Servicios Estudiantiles.
+                        </li>
+                        <li>
+                            En Servicios Estudiantiles te indicaran la fecha de entrega de tu nueva credencial.
+                        </li>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Trámite Estudiantil IMSS">
+                <div class="descripcion">
+                    <br>
+                    <div class="notitulo">
+                        Trámite de IMSS
+                    </div>
+                    <br>
+                    <div class="procesos">
+                        <iframe src="https://view.genial.ly/6413445c7a622500178c62ff/interactive-content-proceso-imss"
+                            width="100%" height="1500px" style="overflow: hidden;"></iframe>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Becas">
+                <div class="descripcion">
+                    <br>
+                    <div class="notitulo">
+                        Becas
+                    </div>
+                    <br>
+                    <div class="procesos">
+                        <iframe src="https://view.genial.ly/6409ef9f15155d00126a8ace/interactive-content-sitio-becasea6"
+                            width="100%" height="1500px" style="overflow: hidden;"></iframe>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Pago de Examen de Regularización">
+                <div class="descripcion">
+                    <br>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <div class="notitulo">
+                                        Proceso de Recuperación
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="procesos">
+                                    <iframe
+                                        src="https://view.genial.ly/643ed4dab5cfa80011a47fde/guide-proceso-de-recuperacion-ea2023"
+                                        width="100%" height="500px" style="overflow: hidden;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <div class="notitulo">
+                                        Proceso de Extraordinario
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="procesos">
+                                    <iframe
+                                        src="https://view.genial.ly/63d402439b77f10012b53c9f/guide-extraordinario-ma2023"
+                                        width="100%" height="1200px" style="overflow: hidden;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Reinscripción">
+                <div class="descripcion">
+                    <br>
+                    <div class="notitulo">
+                        Reinscripción
+                    </div>
+                    <br>
+                    <div class="procesos">
+                        <iframe
+                            src="https://view.genial.ly/6436e1e9c114300013d65010/interactive-content-reinscripcion-cuatrimestral-ma2023"
+                            width="100%" height="1200px" style="overflow: hidden;"></iframe>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Reingreso">
+                <div class="descripcion">
+                    <br>
+                    <div class="procesos">
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                            <mat-tab label="Reincorporación por Baja">
+                                <iframe src="https://view.genial.ly/63ced312f376d3001a8e6881/guide-reingreso-sd2023"
+                                    width="100%" height="800px" style="overflow: hidden;"></iframe>
+                            </mat-tab>
+                            <mat-tab label="Cambio de Otra Universidad Tecnológica">
+                                <iframe
+                                    src="https://view.genial.ly/63d3f32cd1cebc0018e7d6c6/interactive-content-cambio-de-ut-ma2023"
+                                    width="100%" height="1200px" style="overflow: hidden;"></iframe>
+                            </mat-tab>
+                            <mat-tab label="Interesados de Otra Institución Educativa">
+                                <iframe
+                                    src="https://view.genial.ly/63d3f3104330010018e13c96/interactive-content-cambio-de-ie-ma2023"
+                                    width="100%" height="1200px" style="overflow: hidden;"></iframe>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Trámite de Baja">
+                <div class="descripcion">
+                    <br>
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <div class="notitulo">
+                                        Baja Definitiva
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="procesos">
+                                    <iframe src="../../resource/genially/proceso_baja_definitiva_2022" width="100%"
+                                        height="1200px" style="overflow: hidden;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <div class="notitulo">
+                                        Baja Temporal
+                                    </div>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                data-bs-parent="#accordionFlushExample">
+                                <div class="procesos">
+                                    <iframe
+                                        src="https://view.genial.ly/650dc46ab85e1100112ac216/interactive-content-proceso-de-baja-temporal"
+                                        width="100%" height="1500px"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </mat-tab>
+            <mat-tab label="Titulación">
+                <div class="descripcion">
+                    <br>
+                    <div class="procesos">
+                        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                            <mat-tab label="Titulación TSU">
+                                <iframe
+                                    src="https://view.genial.ly/62c60264e4b7e300196900ff/interactive-content-proceso-titulacion-tsuma2023"
+                                    width="100%" height="1500px" style="overflow: hidden;"></iframe>
+                            </mat-tab>
+                            <mat-tab label="Titulación ING/LIC">
+                                <iframe
+                                    src="https://view.genial.ly/640f49b43f071d0018ac6550/interactive-content-proceso-de-titulacion-ing-m-a-2023"
+                                    width="100%" height="500px" style="overflow: hidden;"></iframe>
+                            </mat-tab>
+                        </mat-tab-group>
+                    </div>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--SITO-->
+    <section class="sito" id="sito">
+        <div class="notitulo">
+            <p>SITO</p>
+        </div>
+        <div class="descsito">
+            <a class="btn btn-primary" href="https://sito.utleon.edu.mx/" role="button">Sistema Informativo Táctico
+                Operativo</a>
+        </div>
+        <br>
+        <img class="imghist"
+            src="https://blogger.googleusercontent.com/img/a/AVvXsEj1Qu1d10I1UNGGFVzNAs4JRtDDqtHoDtvIwIw_IqHh6uT9-QyWs6EdNhEluyMYuZCu2i6XwBr1Z_eXP4SZGicTmPIftjo-V3AXS8_kRMpMM8jX0Xk_SEmlnhn92enNxuteJo23J4iPSExiF0F7nxAZvR10gQEC75YBEqb8MkNzpNvPlgdKZfHR8dT7qWGp"
+            alt="sitoimg">
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--AULA VIRTUAL-->
+    <section id="aula-virtual">
+        <div class="notitulo">
+            <p>Aula Virtual</p>
+        </div>
+        <div class="descripcion1">
+            <p>
+                Brindar asesoría para producir recursos y servicios educativos digitales, a través de estrategias
+                tecnológicas, que contribuyen al aprendizaje y mejora continua para la práctica docente en las
+                diferentes modalidades que se imparten en la comunidad educativa.
+            </p>
+        </div>
+        <a class="imgaulita" href="https://zoom.us/j/2455199907?pwd=Z0pQNmRpeUM0VUVVcVArelpwWTIydz09#success">
+            <img class="imgaula"
+                src="https://blogger.googleusercontent.com/img/a/AVvXsEjojxDTerJA4pWEcbBHtouyqqUj0LOs5VXcj9OZNkwMNJst1qgu0HvV838E88sZgdnnSogBiZJXt9RkKyIAKEp8MvAtqkZhhi1GhsJQ5FfiER4WqetITzaSaf9HL7_s1-Dg6Nst9guM7ffqGDrb1vr8Xge1iAD35pS7Iq0YI-lOujQGHawHNrYRo9_RPpi6"
+                alt="">
+        </a>
+        <br>
+        <br>
+        <div class="descsito">
+            <a class="btn btn-primary" href="https://aulaut.utleon.edu.mx/" role="button">Acceder a Micrositio de Aula
+                Virtual</a>
+        </div>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--SERVICIOS ALUMNADO-->
+    <!-- <section id="servicios">
+        <div class="notitulo">
+            <p>Servicios al Alumnado</p>
+        </div>
+    </section> -->
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--CALENDARIO-->
+    <section id="calendario">
+        <div class="notitulo">
+            <p>Calendario Escolar 2023 - 2024</p>
+        </div>
+        <br>
+        <img class="imghist" src="https://www.utleon.edu.mx/resource/img/CALENDARIO%20LE%C3%93N.jpg" alt="">
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--CINTILLO-->
+    <div class="cintillo">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhM27JKvOJf4Ax0jT_GgSJ3iQVBZ3SmWjlrvCWA4CMngF_mYjgSHdUGLAR13aBgZ9prZ44cLWmgyrrXGSVpMeC0slg6qxcxUP4fMQrY5g_1zsT4lYsD3lWo3jHTT3cLBfRVPVV1Invvmq-f81aA_wvyC_nYhvsO2GSUfq26zQZ6SkhxmXm0V07b6zNX27j5"
+            alt="Cintillo">
+        <br>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <br>
+        <p>Blvd. Universidad Tecnológica #225 Col. Sancarlos</p>
+        <p>CP. 37670 León, Gto. Mex. | 477 710 00 20</p>
+        <li><a href="#">Aviso de privacidad</a></li>
+        <br>
+    </footer>
+
+</body>
+
+</html>

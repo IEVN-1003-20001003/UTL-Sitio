@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos del menú principal */
+nav {
+    background-color: #00c2a8;
+    padding: 5px 0;
+    text-align: center; /* Centra el menú principal */
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.menu ul li {
+    position: relative;
+    display: inline-block;
+    margin: 0 3px;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.5s ease;
+    display: block;
+    padding: 10px 20px;
+}
+
+.menu ul li a:hover {
+    background: #0e046b;
+    border-radius: 50px;
+    transform: none;
+    padding: 10px 20px;
+}
+
+/* Estilos del ícono (puedes personalizar según tus necesidades) */
+.icon {
+    width: 20px;
+    height: 20px;
+    background-size: 200% 200%;
+    display: block;
+    background-position: -10px -10px;
+    background-repeat: no-repeat;
+}
+
+/* Submenú a la izquierda */
+.submenu {
+    position: absolute;
+    top: 100%; /* Coloca el submenú debajo del elemento principal */
+    left: 0;
+    background: #00c2a8;
+    border: none;
+    z-index: 1000;
+    text-align: left;
+    display: none;
+    width: 200px; /* Ancho del submenú */
+    /* height: 310px; */
+    
+}
+
+.menu li:hover .submenu {
+    display: block;
+}
+
+.menu li:not(:hover) .submenu {
+    display: none;
+}
+
+.cintillo{
+    text-align: center;
+    height: auto;
+}
+
+.footer{
+    text-align: center;
+    position: flex;
+    background-color: #0e046b;
+    color: #fff;
+}
+
+.notitulo{
+    margin-left: 15%;
+    color: #0e046b;
+    font-weight: bold;
+    font-size: x-large;
+
+}
+
+#navegador{
+    background-color: #fff;
+    margin-left: 15%;
+    font-weight: bold;
+}
+
+.descripcion{
+    margin: auto;
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
+    font-weight: bold;
+}
+
+.accordion{
+    margin: auto;
+    justify-content: center;
+    margin-left: 15%;
+    background-color: #fff;
+    margin-right: 20%;
+}
+
+#collapseOne{
+    margin: auto;
+    margin-left: 20%;
+    margin-right: 5%;
+}
+
+.descripcion1{
+    margin: auto;
+    text-align: left;
+    margin-left: 20%;
+    margin-right: 10%;
+    font-weight: bold;
+}
+
+.titulosperfil{
+    margin: auto;
+    font-weight: bold;
+}
+
+.perfil{
+    margin: auto;
+}
+
+.listaoferta{
+    margin: auto;
+    margin-left: 5%;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.procesos{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.divider{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.contactos{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.logotipo{
+    scale: 180%;
+    
+}

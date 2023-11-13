@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--MENU-->
+    <header>
+        <nav class="menu">
+            <ul class="menuinicial">
+                <li><a class="navbar-brand" routerLink="/UTL">
+                        <img class="logotipo"
+                            src="https://blogger.googleusercontent.com/img/a/AVvXsEhKVCQ32iN6enGnX9yPmZ262Z7ow-rKJydodF2aoMrrt53SnJKhs20Gxr0aHgXXbFUMyVSsqs0Q9MGpNnteD1cfXlQhrgs176_Ljo9SdAiMEtraB2o1P10VGKJ0M_2Pr1xYPrhoj28ThYEClSUNYACaiH6nOVQU9iA_HNGeWHPwT3H8fD3KS7qrE5IAjBaR"
+                            alt="UTLlogo" width="30">
+                    </a>
+                </li>
+                <li><a href="#">Somos UTL</a>
+                    <!-- <ul class="submenu">
+                        <li><a href="#">Nuestra Rectora</a></li>
+                        <li><a href="#">Conoce la UTL</a></li>
+                        <li><a href="#">Calidad</a></li>
+                        <li><a href="#">Difusión e Imagen Institucional</a></li>
+                        <li><a href="#">Organos Colegiados</a></li>
+                        <li><a href="#">Normativa</a></li>
+                        <li><a href="#">Transparencia</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Contáctanos</a></li>
+                    </ul> -->
+                </li>
+                <li><a routerLink="/Aspirantes">Aspirantes</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAspirantes()">Oferta Educativa</a></li>
+                        <li><a (click)="navigateToAspirantes()">¿Como estudiar en UTL?</a></li>
+                        <li><a (click)="navigateToAspirantes()">Sobre Becas</a></li>
+                        <li><a (click)="navigateToAspirantes()">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Alumnos">Alumnos</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAlumnos()">Trámites escolares</a></li>
+                        <li><a (click)="navigateToAlumnos()">SITO</a></li>
+                        <li><a (click)="navigateToAlumnos()">Aula Virtual</a></li>
+                        <!-- <li><a (click)="navigateToAlumnos()">Servicios al Alumnado</a></li> -->
+                        <li><a (click)="navigateToAlumnos()">Calendario Escolar 2023 - 2024</a></li>
+                        <!-- <li><a (click)="navigateToAlumnos()">Correo Institucional</a></li>
+                        <li><a (click)="navigateToAlumnos()">Becas</a></li>
+                        <li><a (click)="navigateToAlumnos()">Biblioteca Digital</a></li>
+                        <li><a (click)="navigateToAlumnos()">Normativa Institucional</a></li>
+                        <li><a (click)="navigateToAlumnos()">Quejas y Denuncias</a></li> -->
+                    </ul>
+                </li>
+                <li><a routerLink="/Docentes">Docentes</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToDocentes()">Recursos Docente</a></li>
+                        <li><a (click)="navigateToDocentes()">Desarrollo Académico</a></li>
+                        <li><a (click)="navigateToDocentes()">Investigación UTL</a></li>
+                        <li><a (click)="navigateToDocentes()">Salud Integral</a></li>
+                        <li><a (click)="navigateToDocentes()">SITO</a></li>
+                        <li><a (click)="navigateToDocentes()">Correo Institucional</a></li>
+                        <li><a (click)="navigateToDocentes()">Biblioteca Digital</a></li>
+                        <li><a (click)="navigateToDocentes()">Normativa Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Administrativo">Administrativo</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToAdmin()">Recursos Administrativos</a></li>
+                        <li><a (click)="navigateToAdmin()">Desarrollo Humano</a></li>
+                        <li><a (click)="navigateToAdmin()">Salud Integral</a></li>
+                        <li><a (click)="navigateToAdmin()">Seguridad Institucional</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Empresario">Empresario</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToEmpre()">Vinculación</a></li>
+                        <li><a (click)="navigateToEmpre()">Servicios a la Ind.</a></li>
+                        <li><a (click)="navigateToEmpre()">Programas Educativos</a></li>
+                        <li><a (click)="navigateToEmpre()">Contáctanos</a></li>
+                    </ul>
+                </li>
+                <li><a routerLink="/Egresado">Egresado</a>
+                    <ul class="submenu">
+                        <li><a (click)="navigateToEgre()">Bolsa de Trabajo</a></li>
+                        <li><a (click)="navigateToEgre()">Emprendimiento</a></li>
+                        <li><a (click)="navigateToEgre()">Educación Continua</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!--CARRUSEL-->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiPl_xY4TmyGbppFjHIXNw-vPkDbP33mRWU-6IWROhfQzhKj3LzjbjNX69dRP9QgBOEITWWm4vlE3PKrNz_EZGH6dUPg1o3O-UzHnS9NcpSBJ8cYWBA1wrCxKY9toZZI8ut1tcSvRyTjQ0KSqHjFfwYV_cxTXQLMS0PMlsKcxRjcrzhkz5UqWxR445fPzyI"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEiBqvXp5vArh1WCQoKQaXdLnBwpNeZkdGvLJb3Yz0K9LKRwm5sxlFenKsn5fVfNbOlghV4v0gO0MHcuPof3sNQMa1E0xb4GXSUEXM8I1ThR0Od-y4wkwtnhxCAL5jKY2pyIt_rqePOjO9ZtEC9hWuDr-Cc7mx604PBMwh_LWnATf6zmqi3e2x0YNJIZmyCT"
+                    class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhWdmNrevFgKtVXwbBtixpxnEPqOlq0Fi5iBOTrxq0Zu9iT-Z9C5cOv-jU2MmTNa0hXn40we0Vci0O582o6tn7smx-M3KdDJqZFhLQa55BLHdAFVRoW1cT4yI2M-8DDgLZxEHnDuCeSGUCBWkeDSuDI7wPU2NMX1GZ8u9JxjC_L0zTA1zpXLb8gp9sN5MWZ"
+                    class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <br>
+    <!--NAVEGACIÓN-->
+    <div>
+        <nav id="navegador"
+            style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+            aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Aspirantes</li>
+            </ol>
+        </nav>
+    </div>
+    <!--OFERTA EDUCATIVA DESCRIPCIÓN-->
+    <section class="oferta" id="oferta-educativa">
+        <div class="informegral">
+            <div class="notitulo">
+                <p>Oferta Educativa</p>
+            </div>
+        </div>
+        <div class="descripcion">
+            <p>En UTL nos enorgullece ofrecer una amplia gama de programas académicos diseñados para preparar a los
+                estudiantes para carreras exitosas en diversas disciplinas con nuestra modalidad cuatrimestral.
+                <br>
+                En nuestra oferta educativa encontrarás la variedad de carreras a cursar en TSU y posteriormente su
+                especialidad en Ingenierías y Licenciaturas junto sus detalles que abarcan:
+                <br>
+                <br>
+                <li class="listaoferta">
+                    Perfiles de ingreso y egreso.
+                </li>
+                <li class="listaoferta">
+                    Campo laboral.
+                </li>
+                <li class="listaoferta">
+                    Plan de materias.
+                </li>
+            </p>
+        </div>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--OFERTA TSU-->
+    <section class="tsu">
+        <div class="notitulo">
+            <p>Nivel TSU</p>
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!--EVN-->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                        <div class="notitulo">
+                            TI Área Entornos Virtuales y Negocios Digitales
+                        </div>
+                    </button>
+                </h2>
+                <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body descripcion1">Es un/a profesional con capacidades para desarrollar
+                        soluciones
+                        tecnológicas en entornos Web, así como implementar aplicaciones multiplataforma, digitales e
+                        interactivas, desarrollando contenidos multidimensionales, realidad virtual, realidad aumentada
+                        para contribuir a la comercialización de productos, servicios y a la optimización de los
+                        recursos de las organizaciones.
+                    </div>
+                    <!--PERFILES, CAMPOS, MATERIAS-->
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                        <!--INGRESO Y EGRESO-->
+                        <mat-tab label="Perfil de Ingreso y Egreso">
+                            <br>
+                            <div class="titulosperfil">
+                                Perfil de Ingreso:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Proviene preferentemente de un bachillerato del Área
+                                        Económico-Administrativo y/o Físico-matemático.</li>
+                                    <li class="list-group-item">Cuenta con habilidades personales tales como:
+                                        innovación, creatividad, organización, administración, capacidad de
+                                        comunicación, abstracción y razonamiento lógico-matemático.</li>
+                                    <li class="list-group-item">Entre sus intereses se encuentran la grabación y
+                                        reproducción de contenido audiovisual, el diseño, programación web, Marketing
+                                        digital, diseño multimedia, así como la edición de fotografía, video, y
+                                        desarrollo de videojuegos, pasión por crear experiencias de usuario en comercio
+                                        electrónico, realidad virtual, realidad aumentada y producción de videos 360°.
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Perfil de Egreso:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">La/el egresada/o de TSU en Entornos Virtuales y Negocios
+                                        Digitales aplicará las técnicas de administración, diseño y desarrollo de
+                                        software, para ofertar servicios de innovación tecnológica de productos
+                                        multimedia y comercio electrónico; será capaz de administrar de manera eficaz
+                                        servidores web, sitios de comercio electrónico, redes sociales y centros de
+                                        cómputo, desarrollar aplicaciones web y móviles, proyectos con realidad
+                                        aumentada, realidad virtual, edición de audio y video, videojuegos en 2D y 3D.
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--FUNCIONES-->
+                        <mat-tab label="Funciones">
+                            <br>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Crea, administra y desarrolla aplicaciones Web, sitios con propósitos
+                                        comerciales, de promoción y de información.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Crea e implementa planes de negocio electrónico y promoción digital para
+                                        pequeñas y medianas empresas.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Implementa y maneja sitios Web a través de frameworks de desarrollo Web, así
+                                        como con administradores de contenido.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Desarrollo de aplicaciones móviles
+                                    </li>
+                                    <li class="list-group-item">
+                                        Desarrollo de aplicaciones multiplataforma, digitales e
+                                        interactivas.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Desarrollo de contenidos multidimensionales, realidad
+                                        virtual, realidad aumentada.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Realiza proyectos de audio, video, modelado y animación
+                                        en 2D y 3D (El alumnado logra crear personajes animados y darles vida a través
+                                        de técnicas avanzadas de animación).
+                                    </li>
+                                    <li class="list-group-item">
+                                        Desarrollo de proyectos audiovisuales mezclando los
+                                        elementos del diseño, fotografía, animación digital, producción audiovisual e
+                                        interactividad.
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--LABORATORIOS-->
+                        <mat-tab label="Laboratorios">
+                            <br>
+                            <div class="perfiles">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Fábrica y célula de desarrollo de software con certificación CMMI nivel 3.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de Multimedia equipado con cámaras de video y fotografía digital,
+                                        software especializado en manejo de imágenes, audio y video.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de Sistemas de Negocios Electrónicos para el desarrollo
+                                        especializado de sitios web (con Tecnología TouchScreen).
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de Mantenimiento Preventivo (IT Essentials).
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de Animación 3D equipado con computadoras Macintosh.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorios de producción multimedia.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Además 11 Centros de Cómputo de aplicación general.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Cabina de audio
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--CAMPO LABORAL-->
+                        <mat-tab label="Campo Laboral">
+                            <br>
+                            <div class="titulosperfil">
+                                Podrá desempeñarse como:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Freelance como integrador de contenidos digitales</li>
+                                    <li class="list-group-item">Diseñador de entornor virtuales, aumentados y mixtos
+                                    </li>
+                                    <li class="list-group-item">Técnico en Diseño y tecnología digital</li>
+                                    <li class="list-group-item">Diseñador FrontEnd</li>
+                                    <li class="list-group-item">Desarrollador Web</li>
+                                    <li class="list-group-item">Administrador de servidores web, aplicaciones web,
+                                        sitios de comercio electrónico</li>
+                                    <li class="list-group-item">Comunity Manager</li>
+                                    <li class="list-group-item">Desarrollador de aplicaciones móviles.</li>
+                                    <li class="list-group-item">Desarrollador de videojuegos 2D y 3D</li>
+                                    <li class="list-group-item">Desarrollador de proyectos de realidad virtual
+                                        (recorridos virtuales)</li>
+                                    <li class="list-group-item">Desarrollador de proyectos de realidad aumentada
+                                        interactiva</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Se puede desenvolver en:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li>Empresas públicas y privadas que demanden servicios de
+                                        Tecnologías de la información preferentemente en desarrollo Web, desarrollo de
+                                        productos digitales, realidad virtual, realidad aumentada, manejo de redes
+                                        sociales tales como:</li>
+                                    <li class="list-group-item">Empresa de servicios comerciales e industriales</li>
+                                    <li class="list-group-item">Pequeñas y medianas empresas</li>
+                                    <li class="list-group-item">Agencias de publicidad</li>
+                                    <li class="list-group-item">Organismos públicos o privados</li>
+                                    <li class="list-group-item">Agencias de consultoria</li>
+                                    <li class="list-group-item">Propia empresa</li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--PLAN DE MATERIAS-->
+                        <mat-tab label="Plan de Materias">
+                            <div class="tarjetas">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">1 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Álgebra líneal</li>
+                                        <li>Desarrollo de Habilidades de Pensamiento Lógico</li>
+                                        <li>Expresión Oral y Escrita I</li>
+                                        <li>Formación Sociocultural</li>
+                                        <li>Fundamentos de Redes</li>
+                                        <li>Fundamentos de TI</li>
+                                        <li>Inglés I</li>
+                                        <li>Metodología de la Programación</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">2 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Base de Datos</li>
+                                        <li>Formación Sociocultural II</li>
+                                        <li>Funciones Matemáticas</li>
+                                        <li>Inglés II</li>
+                                        <li>Interconexión de Redes</li>
+                                        <li>Introducción al Diseño Digital</li>
+                                        <li>Metodologías y Modelado de Desarrollo de Software</li>
+                                        <li>Programación Orienta a Objetos</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">3 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Aplicaciones Web</li>
+                                        <li>Cáculo Diferencial</li>
+                                        <li>Diseño Integral</li>
+                                        <li>Formación Sociocultural III</li>
+                                        <li>Inglés III</li>
+                                        <li>Integradora I</li>
+                                        <li>Mercadotecnia Digital</li>
+                                        <li>Sistemas Operativos</li>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjetas">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">4 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Administración de Proyectos</li>
+                                        <li>Desarrollo de Aplicaciones de Realidad Aumentada</li>
+                                        <li>Formación Sociocultural IV</li>
+                                        <li>Frameworks de Desarrollo Web</li>
+                                        <li>Inglés IV</li>
+                                        <li>Modelado Digital</li>
+                                        <li>Probabilidad y Estadística</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">5 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Animación 3D</li>
+                                        <li>Desarrollo de Aplicaciones de Realidad Virtual</li>
+                                        <li>Desarrollo de Aplicaciones para Negocios Digitales</li>
+                                        <li>Expresión Oral y Escrita</li>
+                                        <li>Inglés V</li>
+                                        <li>Integradora II</li>
+                                        <li>Producción Audiovisual</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">6 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Estadía</li>
+                                        <br>
+                                        <p>
+                                            <button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseWidthExample" aria-expanded="false"
+                                                aria-controls="collapseWidthExample">
+                                                ¿Qué son las estadías?
+                                            </button>
+                                        </p>
+                                        <div style="min-height: 120px;">
+                                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                                <div class="card card-body" style="width: 250px;">
+                                                    Es la práctica profesional que realizas como estudiante de TSU o
+                                                    Ingeniería, donde aplicas todos tus conocimientos adquiridos durante
+                                                    tu formación académica, con la elaboración de un proyecto que
+                                                    satisfaga las necesidades de la Empresa. Este proyecto se desarrolla
+                                                    y culmina en un periodo de 13 semanas.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                    <br>
+                </div>
+            </div>
+            <!--DSM-->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        <div class="notitulo">
+                            TI Área Desarrollo de Software Multiplataforma
+                        </div>
+                    </button>
+                </h2>
+                <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body descripcion1">Es un/a profesional capaz de desarrollar soluciones
+                        tecnológicas para entornos Web mediante fundamentos de programación orientada a objetos, base de
+                        datos y redes de área local que atiendan las necesidades de las organizaciones e implementar
+                        soluciones multiplataforma, en la nube y software embebido, en entornos seguros mediante la
+                        adquisición y administración de datos e ingeniería de software para contribuir a la
+                        automatización de los procesos en las organizaciones.
+                    </div>
+                    <!--PERFILES, CAMPOS, MATERIAS-->
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                        <!--INGRESO Y EGRESO-->
+                        <mat-tab label="Perfil de Ingreso y Egreso">
+                            <br>
+                            <div class="titulosperfil">
+                                Perfil de Ingreso:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Proviene preferentemente de un bachillerato con áreas de
+                                        especialidad Físico-Matemático y/o Técnico/a en Informática.</li>
+                                    <li class="list-group-item">Cuenta con habilidades tales como razonamiento
+                                        lógicomatemático, creatividad, pensamiento crítico y analítico, trabajo autónomo
+                                        y colaborativo, autoaprendizaje e investigación.</li>
+                                    <li class="list-group-item">Entre sus intereses se encuentra la búsqueda de
+                                        soluciones para resolver problemas por medio del uso de tecnologías de la
+                                        información y la ética profesional.
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Perfil de Egreso:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">El/la egresado/a de TSU en Tecnologías de Información y
+                                        Comunicación área Sistemas Informáticos será capaz de analizar y modelar los
+                                        requerimientos del sistema de información, desarrollar aplicaciones en distintas
+                                        plataformas como escritorio, web y móviles, diseñar y aplicar pruebas de
+                                        software, desarrollar y administrar bases de datos, aplicando modelos
+                                        internacionales en desarrollo de software y adaptándose a las nuevas exigencias
+                                        que el mundo globalizado exige.
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--FUNCIONES-->
+                        <mat-tab label="Funciones">
+                            <br>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Establecer requerimientos funcionales y no funcionales, mediante técnicas y
+                                        metodologías de análisis de requerimientos para atender la necesidad planteada.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Diseñar propuestas de interfaces Web, considerando las especificaciones de la
+                                        clientela y técnicas de diseño web para mejorar el entorno visual.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Codificar aplicaciones Web a través de los fundamentos de programación orientada
+                                        a objetos y conexión a base de datos para desarrollarla.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Realizar soporte a redes de área local a través de modelos de interconexión para
+                                        alcanzar los objetivos de desempeño del proyecto.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Implementar servicios básicos de red, mediante la configuración de dispositivos
+                                        y sistemas operativos para el establecimiento de la comunicación en redes
+                                        corporativas pequeñas.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Formular esquemas básicos de seguridad, mediante la configuración de los
+                                        dispositivos de comunicación para la protección de las redes corporativas
+                                        pequeñas.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Identificar la propuesta de solución a través de técnicas y herramientas de
+                                        modelado, para determinar los requerimientos técnicos del sistema de
+                                        información.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Establecer requerimientos funcionales y no funcionales de la solución mediante
+                                        técnicas y metodologías de análisis de requerimientos para atender la necesidad
+                                        planteada.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Diseñar arquitectura del software, mediante el modelado de los procesos y
+                                        componentes para satisfacer los requerimientos técnicos y operacionales de la
+                                        solución.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Codificar soluciones de software seguras a través de entornos de desarrollo y
+                                        arquitectura definida para su implementación.
+                                    </li>
+                                    <li class="list-group-item">Probar soluciones de software a través de ambientes
+                                        automatizados de pruebas para garantizar que los resultados obtenidos sean los
+                                        definidos en los requerimientos.</li>
+                                    <li class="list-group-item">
+                                        Implementar soluciones de software a través de la instalación y puesta en marcha
+                                        para la liberación y cierre del proyecto.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Diseñar bases de datos mediante el análisis de las necesidades organizacionales,
+                                        empleando técnicas de modelado para establecer el modelo conceptual de los
+                                        datos.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Crear bases de datos mediante los gestores para garantizar la integridad de los
+                                        datos.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Generar información mediante el procesamiento de los datos para el apoyo en la
+                                        toma de decisiones y acciones.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Integrar esquemas de seguridad de los datos, mediante técnicas de protección
+                                        para garantizar la integridad y confiabilidad de la información.
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--LABORATORIOS-->
+                        <mat-tab label="Laboratorios">
+                            <br>
+                            <div class="perfiles">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Centro iCarngie
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio RFID
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio CCNP
+                                    </li>
+                                    <li class="list-group-item">
+                                        Fábrica y célula de desarrollo de software con certificación CMMI nivel 3
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de CCNA
+                                    </li>
+                                    <li class="list-group-item">
+                                        Sala de Lectura de CCNA
+                                    </li>
+                                    <li class="list-group-item">
+                                        Centro de certificaciones VUE
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de Redes Inalámbricas (wireless)
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de sistemas operativos multiusuarios
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de sistemas de negocios electrónicos
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de animación 3D
+                                    </li>
+                                    <li class="list-group-item">
+                                        Laboratorio de soporte técnico
+                                    </li>
+                                    <li class="list-group-item">
+                                        Además de 11 centros de computo de aplicación general
+                                    </li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--CAMPO LABORAL-->
+                        <mat-tab label="Campo Laboral">
+                            <br>
+                            <div class="titulosperfil">
+                                Podrá desempeñarse como:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Desarrollador/a de aplicaciones móviles.</li>
+                                    <li class="list-group-item">Desarrollador/a de aplicaciones para la nube.
+                                    </li>
+                                    <li class="list-group-item">Desarrollador/a de aplicaciones para Internet de las
+                                        Cosas.</li>
+                                    <li class="list-group-item">Desarrollador/a de aplicaciones Web.</li>
+                                    <li class="list-group-item">Ejecutor/a de Pruebas.</li>
+                                    <li class="list-group-item">Analista de Sistemas.</li>
+                                    <li class="list-group-item">Programador/a de Sistemas.</li>
+                                    <li class="list-group-item">Administrador/a de Base de Datos.</li>
+                                    <li class="list-group-item">Técnico/a en soporte de Sistemas Informáticos.</li>
+                                    <li class="list-group-item">Integrador/a de seguridad en aplicaciones
+                                        multiplataforma.</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Se puede desenvolver en:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Organizaciones públicas y privadas dedicadas al
+                                        desarrollo y consultoría de software.</li>
+                                    <li class="list-group-item">Organizaciones públicas y privadas cuyo fin no sea el
+                                        desarrollo de software en funciones de análisis, diseño, implementación,
+                                        evaluación y venta de Software.</li>
+                                    <li class="list-group-item">Organizaciones públicas y privadas que cuenten con un
+                                        área o departamento de TI.</li>
+                                    <li class="list-group-item">En su propia empresa de integración de soluciones de
+                                        software.</li>
+                                    <li class="list-group-item">En los sectores público y social, así como de manera
+                                        independiente en las diferentes ramas productivas que demanden servicios de
+                                        Tecnologías de la información preferentemente en desarrollo de software
+                                        multiplataforma.</li>
+                                    <li class="list-group-item">PEn forma independiente mediante consultorías de bienes
+                                        y servicios.</li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--PLAN DE MATERIAS-->
+                        <mat-tab label="Plan de Materias">
+                            <div class="tarjetas">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">1 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Álgebra líneal</li>
+                                        <li>Desarrollo de Habilidades de Pensamiento Lógico</li>
+                                        <li>Expresión Oral y Escrita I</li>
+                                        <li>Formación Sociocultural</li>
+                                        <li>Fundamentos de Redes</li>
+                                        <li>Fundamentos de TI</li>
+                                        <li>Inglés I</li>
+                                        <li>Metodología de la Programación</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">2 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Base de Datos</li>
+                                        <li>Formación Sociocultural II</li>
+                                        <li>Funciones Matemáticas</li>
+                                        <li>Inglés II</li>
+                                        <li>Interconexión de Redes</li>
+                                        <li>Introducción al Diseño Digital</li>
+                                        <li>Metodologías y Modelado de Desarrollo de Software</li>
+                                        <li>Programación Orienta a Objetos</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">3 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Aplicaciones Web</li>
+                                        <li>Bases de Datos para Aplicaciones</li>
+                                        <li>Cálculo Diferencial</li>
+                                        <li>Formación Sociocultural III</li>
+                                        <li>Inglés III</li>
+                                        <li>Integradora I</li>
+                                        <li>Probabilidad y Estadística</li>
+                                        <li>Sistemas Operativos</li>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjetas">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">4 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Aplicaciones Web Orientada a Objetos</li>
+                                        <li>Diseño de Apps</li>
+                                        <li>Estándares y Métricas para el Desarrollo de Software</li>
+                                        <li>Estructura de Datos Aplicadas</li>
+                                        <li>Evaluación y Mejora para el Desarrollo de Software</li>
+                                        <li>Formación Sociocultural IV</li>
+                                        <li>Inglés IV</li>
+                                        <li>Principios para IoT</li>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">5 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Aplicaciones de IoT</li>
+                                        <li>Aplicaciones Web para I4.0</li>
+                                        <li>Bases de Datos para Cómputo en la Nube</li>
+                                        <li>Desarrollo Móvil Multiplataforma</li>
+                                        <li>Expresión Oral y Escrita II</li>
+                                        <li>Integradora II</li>
+                                        <li>Inglés V</li>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">6 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Estadía</li>
+                                        <br>
+                                        <p>
+                                            <button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseWidthExample" aria-expanded="false"
+                                                aria-controls="collapseWidthExample">
+                                                ¿Qué son las estadías?
+                                            </button>
+                                        </p>
+                                        <div style="min-height: 120px;">
+                                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                                <div class="card card-body" style="width: 250px;">
+                                                    Es la práctica profesional que realizas como estudiante de TSU o
+                                                    Ingeniería, donde aplicas todos tus conocimientos adquiridos durante
+                                                    tu formación académica, con la elaboración de un proyecto que
+                                                    satisfaga las necesidades de la Empresa. Este proyecto se desarrolla
+                                                    y culmina en un periodo de 13 semanas.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--OFERTA ING/LIC-->
+    <section class="ing">
+        <div class="notitulo">
+            Nivel Ing/Lic
+        </div>
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+            <!--EVN-->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        <div class="notitulo">
+                            Ingeniería en Entornos Virtuales y Negocios Digitales
+                        </div>
+                    </button>
+                </h2>
+                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body descripcion1">El Ingeniero en entornos virtuales y negocios digitales
+                        cuenta con las competencias profesionales necesarias para su desempeño en el campo laboral, en
+                        el ámbito local, regional y nacional.
+                    </div>
+                    <!--PERFILES, CAMPOS, MATERIAS-->
+                    <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+                        <!--INGRESO Y EGRESO-->
+                        <mat-tab label="Perfil de Ingreso y Egreso">
+                            <br>
+                            <div class="titulosperfil">
+                                Perfil de Ingreso:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Egresado del TSU en TIC, área Entornos Virtuales y
+                                        Negocios Digitales.</li>
+                                    <li class="list-group-item">Capacitado en técnicas de administración, diseño y
+                                        desarrollo de software.</li>
+                                    <li class="list-group-item">Capaz de ofrecer servicios de innovación tecnológica de
+                                        productos multimedia y comercio electrónico.
+                                    </li>
+                                    <li class="list-group-item">Con conocimiento en la administración servidores web,
+                                        sitios de comercio electrónico, redes sociales y centros de cómputo.</li>
+                                    <li class="list-group-item">Conocimiento en el desarrollo de aplicaciones web y
+                                        móviles.</li>
+                                    <li class="list-group-item">Dominio de proyectos con realidad aumentada, realidad
+                                        virtual, edición de audio y video, videojuegos en 2D y 3D.</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Perfil de Egreso:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li>El egresado de la Ingeniería en Entornos Virtuales y
+                                        Negocios Digitales, será capaz de:
+                                    </li>
+                                    <li class="list-group-item">Dirigir e implementar proyectos de negocios digitales y
+                                        soluciones de entornos virtuales.</li>
+                                    <li class="list-group-item">Desarrollo de aplicaciones progresivas.</li>
+                                    <li class="list-group-item">Generación de herramientas de inteligencia en los
+                                        negocios.</li>
+                                    <li class="list-group-item">Desarrollo avanzado inmersivo / multisensorial
+                                        considerando las necesidades del cliente.</li>
+                                    <li class="list-group-item">Capacitado en la interpretación de los datos y la
+                                        normatividad aplicable para contribuir a la evolución digital de las
+                                        organizaciones en el marco global.</li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--COMPETENCIAS-->
+                        <mat-tab label="Competencias">
+                            <br>
+                            <div class="titulosperfil">
+                                Competencias genéricas:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">
+                                        Desarrollar y dirigir organizaciones a través del ejercicio ético del liderazgo,
+                                        con enfoque sistémico para contribuir al logro de objetivos estratégicos.
+                                    </li>
+                                    <li class="list-group-item">
+                                        Desarrollar y fortalecer las habilidades instrumentales, interpersonales,
+                                        sistémicas y directivas para comunicarse en un segundo idioma.
+                                    </li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Competencias específicas:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Dirigir e implementar proyectos de negocios digitales y
+                                        soluciones de entornos virtuales a través del desarrollo de aplicaciones
+                                        progresivas, herramientas de inteligencia en los negocios y desarrollo avanzado
+                                        inmersivo / multisensorial considerando las necesidades del cliente, la
+                                        interpretación de los datos y la normatividad aplicable para contribuir a la
+                                        evolución digital de las organizaciones en el marco global.</li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--CAMPO LABORAL-->
+                        <mat-tab label="Campo Laboral">
+                            <br>
+                            <div class="titulosperfil">
+                                Puede desenvolverse en:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Organizaciones públicas y privadas dedicadas al
+                                        desarrollo de aplicaciones para entornos virtuales.</li>
+                                    <li class="list-group-item">Empresa de servicios comerciales e industriales.
+                                    </li>
+                                    <li class="list-group-item">Agencias de publicidad.</li>
+                                    <li class="list-group-item">Agencias de consultoría.</li>
+                                    <li class="list-group-item">Profesionista independiente.</li>
+                                    <li class="list-group-item">Casas productoras.</li>
+                                    <li class="list-group-item">Agencias de social media.</li>
+                                    <li class="list-group-item">Empresas de desarrollo de videojuegos y aplicaciones
+                                        móviles.</li>
+                                    <li class="list-group-item">Industria del Entretenimiento.</li>
+                                    <li class="list-group-item">La industria turística.</li>
+                                </ul>
+                            </div>
+                            <br>
+                            <div class="titulosperfil">
+                                Puede desempeñarse como:
+                            </div>
+                            <div class="perfil">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item">Director de proyectos digitales.</li>
+                                    <li class="list-group-item">Desarrollador de videojuegos.</li>
+                                    <li class="list-group-item">Modelador 3D.</li>
+                                    <li class="list-group-item">Asistente de producción.</li>
+                                    <li class="list-group-item">Texturizador.</li>
+                                    <li class="list-group-item">Animador 2D y 3D.</li>
+                                    <li class="list-group-item">Creador de Contenidos.</li>
+                                    <li class="list-group-item">Desarrollador de Simuladores.</li>
+                                    <li class="list-group-item">Director de Negocios Digitales</li>
+                                    <li class="list-group-item">Ingeniero de Medios.</li>
+                                    <li class="list-group-item">Analista Web.</li>
+                                    <li class="list-group-item">Director de Tecnologías de la Información.</li>
+                                </ul>
+                            </div>
+                        </mat-tab>
+                        <!--PLAN DE MATERIAS-->
+                        <mat-tab label="Plan de Materias">
+                            <div class="tarjetas">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">7 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Administración del Tiempo
+                                        <li>
+                                        <li>Animación Digital Avanzada</li>
+                                        <li>Inglés VI</li>
+                                        <li>Matemáticas para Ingeniería I</li>
+                                        <li>Producción de Efectos Visuales</li>
+                                        <li>Programación de Videojuegos I</li>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">8 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Base de Datos para Negocios Digitales</li>
+                                        <li>Emprendimiento Digital</li>
+                                        <li>Inglés VII</li>
+                                        <li>Planeación y Organización del Trabajo</li>
+                                        <li>Programación de Videojuegos II</li>
+                                        <li>Programación para Entornos Virtuales</li>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">9 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Analítica de Datos para Negocios Digitales</li>
+                                        <li>Ciberseguridad Aplicada a los Negocios Digitales</li>
+                                        <li>Dirección de Equipos de Alto Rendimiento</li>
+                                        <li>Gestión de Proyectos I</li>
+                                        <li>Inglés VIII</li>
+                                        <li>Matemáticas para Ingeniería II</li>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tarjetas">
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">10 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Gestión de Proyectos II</li>
+                                        <li>Inglés IX</li>
+                                        <li>Integradora</li>
+                                        <li>Inteligencia de Negocios</li>
+                                        <li>Negociación Empresarial</li>
+                                        <li>Programación de Aplicaciones Web Progresivas</li>
+                                    </div>
+                                </div>
+                                <!-- <br> -->
+                                <div class="card" style="width: 18rem;">
+                                    <div class="card-body">
+                                        <h2 class="titulosperfil">11 Cuatrimestre</h2>
+                                        <br>
+                                        <li>Estadía</li>
+                                        <br>
+                                        <p>
+                                            <button class="btn btn-link" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseWidthExample" aria-expanded="false"
+                                                aria-controls="collapseWidthExample">
+                                                ¿Qué son las estadías?
+                                            </button>
+                                        </p>
+                                        <div style="min-height: 120px;">
+                                            <div class="collapse collapse-horizontal" id="collapseWidthExample">
+                                                <div class="card card-body" style="width: 250px;">
+                                                    Es la práctica profesional que realizas como estudiante de TSU o
+                                                    Ingeniería, donde aplicas todos tus conocimientos adquiridos durante
+                                                    tu formación académica, con la elaboración de un proyecto que
+                                                    satisfaga las necesidades de la Empresa. Este proyecto se desarrolla
+                                                    y culmina en un periodo de 13 semanas.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--COMO ESTUDIAR-->
+    <section class="comoestudiar" id="como-estudiar-en-utl">
+        <div class="notitulo">
+            ¿Cómo ingreso a la UTL?
+        </div>
+        <br>
+
+        <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
+            <mat-tab label="Admisiones TSU">
+                <div class="procesos">
+                    <iframe
+                        src="https://view.genial.ly/61ddab3ca31fbb0d87451c9b/horizontal-infographic-diagrams-proceso-de-admision-tsu-2023"
+                        width="100%" height="1500px" style="overflow: hidden;"></iframe>
+                </div>
+            </mat-tab>
+            <mat-tab label="Admisiones ING/LIC">
+                <div class="procesos">
+                    <iframe
+                        src="https://view.genial.ly/6470f08a4ee68f0019b5b74f/horizontal-infographic-diagrams-diagrama-numeros"
+                        width="100%" height="1200px" style="overflow: hidden;"></iframe>
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--BECAS-->
+    <section class="sobrebecas" id="becas">
+        <div class="notitulo">
+            Becas
+        </div>
+        <br>
+        <div class="descripcion">
+            La Universidad Tecnológica de León, cuenta con un sistema de Becas Internas y Externas con el objetivo de
+            brindas apoyo para que el alumnado pueda continuar con su preparación académica y aminorar los factores
+            económicos.
+            <br>
+            <br>
+            ¡Que las cuestiones financieras no sean una limitante para que puedas continuar con tus estudios!
+        </div>
+        <br>
+        <div class="procesos">
+            <iframe src="https://view.genial.ly/6409ef9f15155d00126a8ace/interactive-content-sitio-becasea6"
+                width="100%" height="1500px" style="overflow: hidden;"></iframe>
+        </div>
+    </section>
+    <br>
+    <mat-divider class="divider"></mat-divider>
+    <br>
+    <!--CONTÁCTANOS-->
+    <section class="contacto" id="contactanos">
+        <div class="notitulo">
+            Contáctanos
+        </div>
+        <br>
+        <div class="card contactos">
+            <div class="card-header">
+                Teléfono de Contacto
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>477 710 00 20</p>
+                    <footer class="blockquote-footer">Ex.<cite title="Source Title">245 / 416</cite></footer>
+                </blockquote>
+            </div>
+        </div>
+        <br>
+        <div class="card contactos">
+            <div class="card-header">
+                Redes Sociales
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>4Encuéntranos como UTLMex</p>
+                    <footer class="blockquote-footer"><img src="..." alt="fb"></footer>
+                </blockquote>
+            </div>
+        </div>
+        <br>
+        <div class="card contactos">
+            <div class="card-header">
+                Correo
+            </div>
+            <div class="card-body">
+                <blockquote class="blockquote mb-0">
+                    <p>difusión@utleon.edu.mx</p>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <!--CINTILLO-->
+    <div class="cintillo">
+        <img src="https://blogger.googleusercontent.com/img/a/AVvXsEhM27JKvOJf4Ax0jT_GgSJ3iQVBZ3SmWjlrvCWA4CMngF_mYjgSHdUGLAR13aBgZ9prZ44cLWmgyrrXGSVpMeC0slg6qxcxUP4fMQrY5g_1zsT4lYsD3lWo3jHTT3cLBfRVPVV1Invvmq-f81aA_wvyC_nYhvsO2GSUfq26zQZ6SkhxmXm0V07b6zNX27j5"
+            alt="Cintillo">
+        <br>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <br>
+        <p>Blvd. Universidad Tecnológica #225 Col. Sancarlos</p>
+        <p>CP. 37670 León, Gto. Mex. | 477 710 00 20</p>
+        <li><a href="#">Aviso de privacidad</a></li>
+        <br>
+    </footer>
+
+</body>
+
+</html>
