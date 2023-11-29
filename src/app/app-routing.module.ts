@@ -7,9 +7,10 @@ import { DocentesComponent } from "./docentes/docentes.component";
 import { AdministrativoComponent } from "./administrativo/administrativo.component";
 import { EmpresarioComponent } from "./empresario/empresario.component";
 import { EgresadoComponent } from "./egresado/egresado.component";
+import { AppComponent } from "./app.component";
 
 const routes: Routes = [
-    { path: '', redirectTo: '/UTL', pathMatch: 'full' },
+    { path: '', redirectTo: 'UTL', pathMatch: 'full' },
     { path: 'UTL', component: PrototipoComponent },
     { path: 'Aspirantes', component: AspirantesComponent },
     { path: 'Alumnos', component: AlumnosComponent },
